@@ -1,21 +1,17 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 import React from "react" 
+import { Link } from "react";
 
 
 
 const Item = ({prod}) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>{prod.nombre}</Card.Title>
-        <Card.Text>
-          {prod.precio}
-        </Card.Text>
-        <Button variant="primary">Ver detalle</Button>
-      </Card.Body>
-    </Card>
+    <div>
+      <img src={prod.img} alt="" width="200px" height="200px"/>
+      <h3>{prod.nombre}</h3>
+      <p>{prod.precio}</p>
+      <button>ver detalles</button>
+    </div>
   );
 }
 

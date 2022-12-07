@@ -9,38 +9,37 @@ import { getFetch } from "../../Mock";
 const ItemDetailContainer = () =>{
 
 const [Productos, setProductos] = useState([]) //Si ponemos el array [] funciona porque no te pide map
+const [loading, setLoading] = useState(true)
 
 const {productId} = useParams()
 
+
     
     useEffect(()=>{
-        
         getProductById(productId)
-            getFetch
+        getFetch
                .then((respuesta)=> setProductos(respuesta)) //hago la llamada a la api obtengo los productos lo guardo en el estado
                .catch(err => console.log(err))
+               .finally(()=>setLoading(false))
        },[productId])
 
     return(
 
         //Obtener datos de un producto y mostrarlo
+        <section>
+        {
+        loading
+        ?
+        <h2 class ="cargando">Cargando...</h2>
+        :
         <div>
-        <section>
-         <h2>Productos</h2>
-        </section>
- 
-        <section>
-           <div>
-             <h2 >Detalle del producto</h2>
-             <div >
-                 <p>{Productos.nombre}</p>
-                 <p>{Productos.detalle}</p>
-                 <p>{Productos.precio}</p>
-             </div>
-           </div>
-           
-        </section>
+          <h2 class="productos_titulo">Detalle del producto</h2>
+          <div class="productos_lista">
+              <ItemDetail prod = {Productos}/> 
+          </div>
         </div>
+        }
+     </section>
 
        
        )
