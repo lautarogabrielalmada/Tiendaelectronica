@@ -29,7 +29,7 @@ const {productId} = useParams("")
         {
         loading
         ?
-        <h2 class ="cargando">Cargando...</h2>
+        <h2 class ="cargando">...</h2>
         :
         <div>
           <h2 class="productos_titulo">Detalle del producto</h2>

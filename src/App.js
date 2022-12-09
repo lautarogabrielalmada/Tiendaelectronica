@@ -6,18 +6,26 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom" //permite conectar la aplicacion con el navegador tambien se ponen las routes y route
 
 const App = () => {
-    const bienvenida = "Bienvenidos a la tienda Holistica Alma";
+    const bienvenida = "Bienvenidos a la tienda Electronica Toro";
 
     return(
         <BrowserRouter>
             <header>
                 <NavBar/>
             </header>
-        <Routes>
-           <Route path="/" element={<ItemListContainer/>}></Route> 
-           <Route path="/category/:categoryId" element={<ItemListContainer/>}></Route> 
-           <Route path="/detail/:productId" element={<ItemDetailContainer/>}></Route> 
-        </Routes>
+
+            <main>
+
+                
+
+                <Routes>
+                    <Route path="/" element={<ItemListContainer greeting={bienvenida}/>}></Route> 
+                    <Route path="/category/:categoryId" element={<ItemListContainer/>}></Route> 
+                    <Route path="/detail/:productId" element={<ItemDetailContainer/>}></Route> 
+                </Routes>
+
+            </main>
+        
 
 
         {/* <div>

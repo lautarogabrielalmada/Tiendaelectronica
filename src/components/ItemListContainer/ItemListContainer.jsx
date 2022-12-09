@@ -7,7 +7,7 @@ import ItemList from "../ItemList/ItemList"
 
 
 
-const ItemListContainer=({greeting,greeting2})=>{
+const ItemListContainer=({greeting})=>{
 
 
 const [Productos, setProductos] = useState([])
@@ -31,7 +31,7 @@ useEffect(()=>{ //Se hace el llamado a la api solo cuando se monte y que despuye
           {
           loading
           ?
-          <h2 class ="cargando">Cargando...</h2>
+          <h2 class ="cargando">...</h2>
           :
           <div>
             <h2 class="productos_titulo">Productos</h2>

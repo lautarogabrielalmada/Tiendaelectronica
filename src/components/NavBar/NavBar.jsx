@@ -9,18 +9,17 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Alma-Holistica</Navbar.Brand>
+        <Navbar.Brand href="#home">Electronica-Toro</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Inicio</Nav.Link>
             <Nav.Link href="#link">Nosotros</Nav.Link>
-            <NavDropdown title="Ver más" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Sahumerios</NavDropdown.Item>
+            <NavDropdown title="Categorias" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Consolas</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Piramides
+                Notebooks
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Sahumadores</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Ver todo
