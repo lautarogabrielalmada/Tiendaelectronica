@@ -17,13 +17,13 @@ const NavBar = () => {
             <Nav.Link href="#home"><Link to={"/"}>Inicio</Link></Nav.Link>
             <Nav.Link href="#link">Nosotros</Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1"><Link to={`/category/consola}`}>Consolas</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><Link to={"/category/consola"}>Consolas</Link></NavDropdown.Item>
               
-              <NavDropdown.Item href="#action/3.1"><Link to={`/category/notebook}`}>Notebooks</Link></NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1"><Link to={"/category/notebook"}>Notebooks</Link></NavDropdown.Item>
               
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Ver todo
+              <Link to={"/"}>Ver todo</Link>
               </NavDropdown.Item>
             </NavDropdown>
            

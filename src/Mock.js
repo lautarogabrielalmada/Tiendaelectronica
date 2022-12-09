@@ -16,7 +16,8 @@ const productos = [
         detalle:"xbox 360 con 2 controles y un casco de realidad virtual",
         precio:500},
 
-    { id:"3",
+    { 
+        id:"3",
         category:"notebook",
         img:"https://http2.mlstatic.com/D_NQ_NP_878660-MLA41444063860_042020-O.jpg",
         nombre:"HP-1035",
@@ -62,7 +63,7 @@ export const getProductById = (id) => {
 export const getProductByCategory = (categoryId) => {
     return new Promise (resolve => {
         setTimeout(()=> {
-            resolve(productos.find((prod) => {
+            resolve(productos.filter((prod) => {
                 return prod.category === categoryId
             } ))
         },1000)
