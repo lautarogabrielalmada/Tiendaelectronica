@@ -3,21 +3,21 @@ const productos = [
         id:"1",
         img:"https://i.blogs.es/86b11e/ps51/1366_2000.jpeg",
         nombre:"Play station 5",
-        categoria:"consola",
+        category:"consola",
         detalle:"PS5 calidad 4k realidad virtual 60fps",
         precio:3000
     },
 
     {   
         id:"2",
-        categoria:"consola",
+        category:"consola",
         img:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6428/6428324_sd.jpg",
-        nombre:"Xbox",
+        nombre:"Xbox One",
         detalle:"xbox 360 con 2 controles y un casco de realidad virtual",
         precio:500},
 
     { id:"3",
-        categoria:"notebook",
+        category:"notebook",
         img:"https://http2.mlstatic.com/D_NQ_NP_878660-MLA41444063860_042020-O.jpg",
         nombre:"HP-1035",
         detalle:"HP 15 pulgadas con procesador ryzen 3 apta para juegos",
@@ -25,7 +25,7 @@ const productos = [
 
     {   
         id:"4",
-        categoria:"notebook",
+        category:"notebook",
         img:"https://www.computools.com.ar/Temp/App_WebSite/App_PictureFiles/Items/195477109315_800.jpg",
         nombre:"Lenovo 82fg",
         detalle:"Lenovo con procesador i7 touch 17 pulgadas gamer con la mejor velocidad en juegos",
@@ -40,7 +40,7 @@ export const getFetch = new Promise((respuesta,rejected)=>{
     if(url === "www.productosholistica.com.ar"){
         setTimeout(()=>{
             respuesta(productos);
-        },2000)
+        },1000)
     }else{
         rejected("400 not found")
     }
@@ -54,7 +54,18 @@ export const getProductById = (id) => {
             resolve(productos.find((prod) => {
                 return prod.id === id
             } ))
-        },2000)
+        },1000)
+
+    })
+}
+
+export const getProductByCategory = (categoryId) => {
+    return new Promise (resolve => {
+        setTimeout(()=> {
+            resolve(productos.find((prod) => {
+                return prod.category === categoryId
+            } ))
+        },1000)
 
     })
 }

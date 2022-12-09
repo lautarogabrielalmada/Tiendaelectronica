@@ -9,8 +9,19 @@ const ItemDetail = ({prod}) => {
         <Card.Body>
           <Card.Title>{prod.nombre}</Card.Title>
           <Card.Text>
-            {prod.precio}
+            $ {prod.precio}
+            
+          
+          </Card.Text>
+          <Card.Text>
+           
             {prod.detalle}
+           
+          </Card.Text>
+          <Card.Text>
+           
+           
+            {prod.categoria}
           </Card.Text>
         </Card.Body>
       </Card>

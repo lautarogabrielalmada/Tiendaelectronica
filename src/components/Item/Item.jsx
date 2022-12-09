@@ -15,11 +15,18 @@ const Item = ({prod}) => {
 <Card.Body>
   <Card.Title>{prod.nombre}</Card.Title>
   <Card.Text>
+    {prod.categoria}
+  </Card.Text>
+  <Card.Text>
+    {prod.categoria}
   $ {prod.precio}
   </Card.Text>
-  <Button variant="dark"><Link className="hola" to={`/detail/${prod.id}`}>Ver detalle</Link></Button>
+  
 </Card.Body>
+<Button variant="dark"><Link className="hola" to={`/detail/${prod.id}`}>Ver detalle</Link></Button>
 </Card>
+
+
 
   );
 }
