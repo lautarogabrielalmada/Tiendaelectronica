@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {getProductById} from "../../Mock";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { getFetch } from "../../Mock";
+
 
 
 
@@ -11,13 +11,12 @@ const ItemDetailContainer = () =>{
 const [Productos, setProductos] = useState([]) //Si ponemos el array [] funciona porque no te pide map
 const [loading, setLoading] = useState(true)
 
-const {productId} = useParams()
+const {productId} = useParams("")
 
 
     
     useEffect(()=>{
         getProductById(productId)
-        getFetch
                .then((respuesta)=> setProductos(respuesta)) //hago la llamada a la api obtengo los productos lo guardo en el estado
                .catch(err => console.log(err))
                .finally(()=>setLoading(false))
