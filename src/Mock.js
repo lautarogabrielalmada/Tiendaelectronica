@@ -5,7 +5,8 @@ const productos = [
         nombre:"Play station 5",
         category:"consola",
         detalle:"PS5 calidad 4k realidad virtual 60fps",
-        precio:3000
+        precio:3000,
+        stock:10,
     },
 
     {   
@@ -14,7 +15,9 @@ const productos = [
         img:"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6428/6428324_sd.jpg",
         nombre:"Xbox One",
         detalle:"xbox 360 con 2 controles y un casco de realidad virtual",
-        precio:500},
+        precio:500,
+        stock:10,},
+        
 
     { 
         id:"3",
@@ -22,7 +25,8 @@ const productos = [
         img:"https://http2.mlstatic.com/D_NQ_NP_878660-MLA41444063860_042020-O.jpg",
         nombre:"HP-1035",
         detalle:"HP 15 pulgadas con procesador ryzen 3 apta para juegos",
-        precio:600},
+        precio:600,
+        stock:10,},
 
     {   
         id:"4",
@@ -30,7 +34,8 @@ const productos = [
         img:"https://www.computools.com.ar/Temp/App_WebSite/App_PictureFiles/Items/195477109315_800.jpg",
         nombre:"Lenovo 82fg",
         detalle:"Lenovo con procesador i7 touch 17 pulgadas gamer con la mejor velocidad en juegos",
-        precio:150}
+        precio:150,
+        stock:10,}
 ]
 
 

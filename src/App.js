@@ -28,16 +28,7 @@ const App = () => {
         
 
 
-        {/* <div>
-            <header>
-                <NavBar/>
-            </header>
-
-            <main>
-                <ItemListContainer greeting={bienvenida}/>
-            </main>
-
-        </div> */}
+       
         </BrowserRouter>
     );
 }

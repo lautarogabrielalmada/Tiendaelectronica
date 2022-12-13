@@ -22,6 +22,8 @@ const {productId} = useParams("")
                .finally(()=>setLoading(false))
        },[productId])
 
+      
+
     return(
 
         //Obtener datos de un producto y mostrarlo
